@@ -1,0 +1,36 @@
+function casi(){
+  var dataPoints = [];
+  var options = {
+      title:{
+      text: "Gaming Consoles Sold in 2012"
+    },
+      legend: {
+        maxWidth: 350,
+        itemWidth: 120
+      },
+      data: [{
+        type: "pie",
+        showInLegend: true,
+        legendText: "{indexLabel}",
+        dataPoints: dataPoints,
+      }]
+  };
+
+  $.ajax(
+    {
+    type:"GET",
+    url:`https://www.superheroapi.com/api.php/4844752785553016/${numeroHeroe}`,
+    dataType:"json",
+    success: function(datos){
+      let datosApi = datos;
+      alert(Object.values(datosApi.powerstats)[1]);
+
+      for (var i = 0; i < Object.keys(datosApi.powerstats).length; i++)
+          dataPoints.push({
+              indexLabel: new Object.keys(datosApi.powerstats)[i],
+              y: Object.values(datosApi.powerstats)[i]
+          });
+    }
+    $("#chartContainer").CanvasJSChart(options);
+  });
+}

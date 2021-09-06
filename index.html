@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets\styles.css">
+    <title></title>
+  </head>
+  <body>
+
+  <header>
+    <img src="assets\img\favicon.ico" alt="">
+    <h5>SuperHero</h5>
+  </header>
+
+
+  <section id="main-section">
+    <img src="assets\img\sh1.jpg" alt="">
+
+    <form action="/formulario"  method="post">
+      <h1>Encuentra tu SuperHero</h1>
+      <label for="encuentra_tu_superhero">Ingresa tu número de SuperHero a buscar</label>
+      <input type="text" name="nombredelFormulario" value="" id="encuentra_tu_superhero" >
+      <button id="botonBuscar" type="button" name="button" onclick="validaciones()">Buscar</button>
+    </form>
+  </section>
+
+ <section>
+    <aside id="datos-heroe" class="container">
+
+    </aside>
+    <aside id="grafico" class="container">
+      <div id="chartContainer" style="height: 300px; width: 100%;">
+    </aside>
+ </section>
+
+
+  <!--jQuery 3.5.1-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- Bootstrap 4.5.3 CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <!-- CanvasJS -->
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <!-- Archivo JavaScript -->
+  <script src="assets\script.js"></script>
+  </body>
+</html>
